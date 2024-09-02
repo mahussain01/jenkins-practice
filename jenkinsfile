@@ -4,6 +4,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'building'
+                sh 'pwd'
+                sh 'ls -ltr'
             }
         }
         stage('Test') {
@@ -14,7 +16,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'deploying'
-                error 'this is failed'
+                //error 'this is failed'
             }
         }
     }
