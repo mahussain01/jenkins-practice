@@ -4,8 +4,12 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'building'
-                sh 'pwd'
-                sh 'ls -ltr'
+                sh '''
+                ls -ltr
+                pwd
+                echo "hi from three single quotes
+
+                '''
             }
         }
         stage('Test') {
