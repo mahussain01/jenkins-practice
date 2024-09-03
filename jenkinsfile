@@ -23,6 +23,14 @@ pipeline {
                 echo 'testing'
             }
         }
+                stage('Example') {
+            environment { 
+                AUTH = credentials('ssh-auth') 
+            }
+            steps {
+                sh 'printenv'
+            }
+        }
         stage('Deploy') {
             steps {
                 echo 'deploying'
