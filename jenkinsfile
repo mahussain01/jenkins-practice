@@ -1,5 +1,7 @@
 pipeline {
     agent { node { label 'agent-1' } } 
+     triggers {
+        cron('* * * * *')
         options {
         timeout(time: 1, unit: 'HOURS') }
          environment { 
