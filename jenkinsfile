@@ -23,7 +23,7 @@ pipeline {
                 echo 'testing'
             }
         }
-                stage('Example') {
+            stage('Example') {
             environment { 
                 AUTH = credentials('ssh-auth') 
             }
