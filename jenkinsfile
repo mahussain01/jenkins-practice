@@ -24,10 +24,11 @@ pipeline {
                 ls -ltr
                 pwd
                 echo "hi from github webhook events"
-                printenv
+                
                 
 
                 '''
+                echo 'printenv'
             }
         }
         stage('Test') {
