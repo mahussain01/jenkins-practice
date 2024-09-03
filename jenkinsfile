@@ -79,6 +79,15 @@ stage('Example') {
                 echo "Hello, ${PERSON}, nice to meet you."
             }
         }
+        stage("prod deploy")
+        {
+            when {
+                branch 'master'
+            }
+            steps{
+                echo "the master is in production"
+            }
+        }
         
     }
         post { 
