@@ -65,7 +65,7 @@ pipeline {
 
                 echo "Password: ${params.PASSWORD}"
             }
-        }
+        
         input {
                 message "Should we continue?"
                 ok "Yes, we should."
